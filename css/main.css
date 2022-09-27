@@ -1,0 +1,236 @@
+/* Following body selector adds css to the whole body part */
+body {
+    background-color: #ffffc2;
+    padding: 3% 10px;
+    font-family: sans-serif;
+    margin-top: 0;
+}
+
+/* Following button selector adds css to the button which can change the theme of the page */
+button {
+	background-color: black;
+	color: #c5a800;
+	padding: 12px;
+	border: none;
+	position: sticky;
+	top: 10px;
+	right: 10px;
+	border-bottom-right-radius: 10%;
+	border-top-right-radius: 10%;
+}
+
+/* Following part of the css adds css to the header which includes navigation elements too */
+header {
+    background-color: #c68e17;
+    color: white;
+    margin-bottom: 20px;
+}
+
+header h1, header h2, header h3 {
+    padding: 0 20px;
+}
+
+header h1 {
+    padding-top: 20px;
+}
+
+header p {
+    float: right;
+    padding: 0 20px;
+    font-size: 15px;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+nav {
+    height: 60px;
+    background-color: #ffdb58;
+    padding: 5px;
+}
+
+nav ul {
+    display: flex;
+    padding: 0 5px; 
+    flex-flow: row;
+}
+
+nav ul li {
+    max-width: fit-content;
+    list-style-type: none;
+    padding: 5px;
+    margin: 0 5px;
+    align-items: center;
+}
+
+nav ul li a {
+    color: black;
+}
+
+/* Following img selector applies to all the images */
+img {
+    box-sizing: border-box;
+    border: solid white 5px;
+    max-width: 100%;
+    margin: 2px;
+}
+
+/* Following pg-main id selector chnages the font size of the whole page */
+#pg-main {
+    font-size: larger;
+}
+
+.links {
+    color: grey;
+    text-decoration: none;
+}
+
+/* Following part adds css to the featured news section */
+#featured-news {
+    display: grid;
+    gap: 20px;
+}
+
+
+#img2021 {
+    float: left;
+    margin: 0 5px 5px 0;
+}
+
+/* Following part adds CSS to the Halifax News */
+#hali-zone {
+    display: grid;
+    gap: 20px;
+}
+
+/* Following part adds css to other sections */
+#folds {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.conatainer-style {
+    background-color: #ffffc2;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.sub-containers {
+    background-color: #ffdb58;
+    color: black;
+    padding: 10px;
+}
+
+.flex-folders {
+    color: black;
+}   
+
+.sub-folders {
+    background-color: #ffdb58;
+    max-height: fit-content;
+    padding: 10px;
+}
+
+/* Following part adds css to the footer */
+#pg-footer {
+    background-color: #c68e17;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Styling for the view-port: tablet */
+@media screen and (max-width: 1200px) {
+    
+
+    #featured-news {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    #featured-news h2 {
+        grid-column: 1 / -1;
+    }
+    
+    #img2021 {
+        float: none;
+    }
+
+    #folds {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #nat-int {
+        grid-column: 1 / -1;
+    }
+
+    
+}
+
+
+/* Styling for the view-port: mobile/smartphone */
+@media screen and (max-width: 800px) {
+    body {
+        padding: 0;
+        font-size: small;
+    }
+
+    #featured-news {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .header-style {
+        text-align: center;
+    }
+
+    nav ul {
+        flex-flow: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        grid-column: 1 / -1;
+    }
+
+    header p {
+        font-size: smaller;
+    }
+
+    nav {
+        height: min-content;
+        padding: 1px;
+    }
+
+    nav ul li {
+        margin: 1px 0;
+    }
+
+    main {
+        padding: 0 5%;
+    }
+
+    .conatainer-style {
+        padding: 5px;
+    }
+    
+
+    #folds {
+        display: flex;
+        flex-flow: column;
+        padding: 5px;
+    }
+}
